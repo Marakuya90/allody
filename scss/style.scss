@@ -1,0 +1,71 @@
+body {
+  background-color: #000000;
+}
+.section0 {
+  width: 100vw;
+  height: 892px;
+  position: relative;
+}
+.glow-1 {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: inherit;
+  top:0;
+  height: inherit;
+  z-index: 0;
+  // background-image: url('/public/images/glow-1.png');
+  // background-size: contain;
+}
+.hue-saturation-51 {
+  position: absolute;
+  width: inherit;
+  top:0;
+  z-index: 1;
+  height: 100%;
+  img {
+    width: inherit;
+    height: inherit;
+    opacity: 0.5;
+  }
+}
+.layer__left_right {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.mafia-costume {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  top:0;
+  width: 100%;
+  z-index: 2;
+}
+.layer-1573 {
+  position: absolute;
+  display: flex;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  flex-direction: column-reverse;
+  z-index: 2;
+    img {
+      width: 2609px;
+      height: 380px;
+    }
+}
+.blueglow-1 {
+  position: absolute;
+  display: flex;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  flex-direction: column-reverse;
+  z-index: 3;
+    img {
+      width: 1977px;
+      height: 172px;
+    }
+}
