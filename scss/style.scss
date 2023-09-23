@@ -1,38 +1,38 @@
 body {
   background-color: #000000;
 }
+%position_flex {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+%inherit_w_h {
+  width: inherit;
+  height: inherit;
+}
+
 .section0 {
   width: 100vw;
   height: 892px;
   position: relative;
 }
-.glow-1 {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: inherit;
-  top:0;
-  height: inherit;
-  z-index: 0;
-  // background-image: url('/public/images/glow-1.png');
-  // background-size: contain;
-}
 .hue-saturation-51 {
+  @extend %inherit_w_h;
   position: absolute;
-  width: inherit;
   top:0;
   z-index: 1;
-  height: 100%;
   img {
-    width: inherit;
-    height: inherit;
+    @extend %inherit_w_h;
     opacity: 0.5;
   }
 }
 .layer__left_right {
+  @extend %inherit_w_h;
   display: flex;
   justify-content: space-between;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
 }
 .mafia-costume {
   position: absolute;
@@ -41,16 +41,16 @@ body {
   height: 100%;
   top:0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 .layer-1573 {
   position: absolute;
   display: flex;
   top: 0;
   width: inherit;
-  height: inherit;
+  height: 101%;
   flex-direction: column-reverse;
-  z-index: 2;
+  z-index: 4;
     img {
       width: 2609px;
       height: 380px;
@@ -60,12 +60,34 @@ body {
   position: absolute;
   display: flex;
   top: 0;
+  left: 70px;
   width: inherit;
   height: inherit;
   flex-direction: column-reverse;
-  z-index: 3;
-    img {
-      width: 1977px;
-      height: 172px;
-    }
+  z-index: 4;
+  div {
+    width: 1977px;
+    height: 172px;
+    background: url('/public/images/blueglow-1.png');
+  }
+}
+.glow-1 {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: inherit;
+  top:0;
+  height: inherit;
+  z-index: 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: url('/public/images/glow-1.png'),lightgray 0px -11.198px / 100% 153.408% no-repeat;
+  background-position: 79px;
+}
+.logo {
+  width: inherit;
+  height: inherit;
+  img {
+    width: 376px;
+    height: 348px;
+  }
 }
