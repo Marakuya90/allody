@@ -1,5 +1,13 @@
-body {
+.body {
+  width: 1987px;
+}
+.content {
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
   background-color: #000000;
+  max-width: 1920px;
+  height: 934px;
 }
 %position_flex {
   display: flex;
@@ -8,65 +16,72 @@ body {
 }
 %inherit_w_h {
   width: inherit;
-  height: inherit;
+  height: inherit;  
 }
 
 .section0 {
-  width: 100vw;
-  height: 892px;
+  width: inherit;
+  height: inherit;
   position: relative;
 }
 .hue-saturation-51 {
-  @extend %inherit_w_h;
-  position: absolute;
-  top:0;
-  z-index: 1;
+  overflow: hidden;
+  height: 892px;
   img {
-    @extend %inherit_w_h;
-    opacity: 0.5;
+    width: 1974px;
   }
 }
 .layer__left_right {
-  @extend %inherit_w_h;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   position: absolute;
   top: 0;
-  z-index: 3;
+  z-index: 0;
 }
 .mafia-costume {
+  height: 892px;
   position: absolute;
   display: flex;
   justify-content: space-between;
-  height: 100%;
+  align-items: flex-end;
+  gap:641px;
   top:0;
-  width: 100%;
-  z-index: 3;
+  z-index: 1;
+    .mafia-costume__woman {
+      width: 577px;
+      height: 876px;
+    }
+    .mafia-costume__man {
+      width: 678px;
+      height: 876px;
+    }
 }
+
 .layer-1573 {
+  height: 896px;
   position: absolute;
   display: flex;
   top: 0;
-  width: inherit;
-  height: 101%;
   flex-direction: column-reverse;
-  z-index: 4;
+  z-index: 2;
+  overflow: hidden;
     img {
       width: 2609px;
       height: 380px;
     }
 }
 .blueglow-1 {
+  @extend %inherit_w_h;
   position: absolute;
   display: flex;
   top: 0;
   left: 70px;
-  width: inherit;
-  height: inherit;
   flex-direction: column-reverse;
   z-index: 4;
   div {
-    width: 1977px;
+    max-width: 1977px;
     height: 172px;
     background: url('/public/images/blueglow-1.png');
   }
@@ -75,18 +90,23 @@ body {
   display: flex;
   justify-content: center;
   position: absolute;
-  width: inherit;
   top:0;
-  height: inherit;
-  z-index: 0;
+  z-index: 5;
+  max-width: 2006px;
+  height: 892px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background: url('/public/images/glow-1.png'),lightgray 0px -11.198px / 100% 153.408% no-repeat;
-  background-position: 79px;
+  background: url('/public/images/glow-1.png');
+  background-size: contain;
+  background-repeat: no-repeat
+  // background-position: 79px;
 }
 .logo {
-  width: inherit;
-  height: inherit;
-  img {
+  @extend %inherit_w_h;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 6;
+  div {
     width: 376px;
     height: 348px;
   }
